@@ -1,6 +1,10 @@
 #ifndef __GEOCOORD_HPP__
 #define __GEOCOORD_HPP__
 
+#include <string>
+
+using std::string;
+
 namespace geocoord
 {
 	class Coordinate
@@ -9,7 +13,7 @@ namespace geocoord
 		/**
 		* Initializes coordinate at longitude 0.0 deg, latitude 0.0 deg
 		*/
-		Coodinate();
+		Coordinate();
 		
 		/**
 		* Initializes coordinate at longitude x, latitude y
@@ -20,7 +24,7 @@ namespace geocoord
 		/**
 		* Computes the distance of two coordinates on earth given longitude and latitute of two points
 		*/
-		double geo_distance(Coordinate start, Coordinate end);
+		double geo_distance(Coordinate end);
 
 	private:
 		/**

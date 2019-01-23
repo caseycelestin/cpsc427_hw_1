@@ -18,19 +18,18 @@ namespace geocoord
 		lon = 0.0;
 	}
 
-	Coordinate::Coordinate(string x, string y)
+	Coordinate::Coordinate(string x, string y)	
 	{
 		lat = coordinate_converter(x);
-		lat = coordinate_converter(y);
+		lon = coordinate_converter(y);
 	}
 
-	double geo_distance(Coordinate start, Coordinate end)
+	double Coordinate::geo_distance(Coordinate end)
 	{
 		double a, b, C, angle, d;
-		
-		a = 1.570796 - start.lat;
+		a = 1.570796 - lat;
 		b = 1.570796 - end.lat;
-		C = start.lon - end.lon;
+		C = lon - end.lon;
 		
 		angle = acos( cos(a) * cos(b) + sin(a) * sin(b) * cos(C) );
 		d = angle * 3959;
@@ -38,7 +37,7 @@ namespace geocoord
 		return d;
 	}
 
-	double coordinate_converter(string coord_in)
+	double Coordinate::coordinate_converter(string coord_in)
 	{
 		double coord_out;
 		double deg, min, sec;
