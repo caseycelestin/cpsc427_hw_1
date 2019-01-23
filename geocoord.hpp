@@ -15,12 +15,12 @@ namespace geocoord
 		* Initializes coordinate at longitude x, latitude y
 		* Arguments  are strings to handle Deg:Min:Sec form
 		*/
-		Coordinate(string, string);
+		Coordinate(string x, string y);
 		
 		/**
 		* Computes the distance of two coordinates on earth given longitude and latitute of two points
 		*/
-		double geo_distance(Coordinate, Coordinate);
+		double geo_distance(Coordinate start, Coordinate end);
 
 	private:
 		/**
