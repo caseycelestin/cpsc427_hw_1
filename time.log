@@ -3,3 +3,16 @@ Homework 1 Log
 
 ESTIMATE: 6 hours
 
+Date  Start  Spent  Work
+----  -----  -----  ----
+1/19  17:20  1:00   Read assignment and implemented reading from stdin by line
+1/20  16:00  1:30   Added geo_distance formula, tweaked to get right output
+1/23  12:00  2:00   Added a coordinate class to make program more object-oriented, error upon compilation
+1/24  12:00  0:30   Found error in Makefile, code compiles and passes tests
+             -----
+			 5:00  TOTAL 
+
+I discussed with: Sam Laing and Nikola Kamcev
+
+Difficulties: I have not taken a proper CS course since the Spring 2015 semester so the problems I encountered were more basic and workflow related. I had to relearn concepts such as Makefiles, git, compiling, and Linux workflow. As for the assignment, I struggled a bit implementing the separte class header and implementation file, forgetting to put the .o file in the Makefile.
+
